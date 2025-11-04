@@ -1,0 +1,33 @@
+:root {
+  /* Cores principais */
+  --cor-primaria: #0061e8;
+  --cor-secundaria: #0d2149;
+  --cor-terciaria: #e0d900;
+  --cor-fundo: #edf6ff;
+  --cor-texto: #333333;
+  --cor-texto-secundario: #9ea7b3;
+  --cor-branca: #ffffff;
+  --cor-preta: #000000;
+  /* Fonte */
+  --font-family-base: "Poppins", Arial, sans-serif;
+
+  /* Hierarquia de tamanhos */
+  --font-xxl: 48px; /* títulos principais */
+  --font-xl: 36px;  /* subtítulos */
+  --font-lg: 28px;  /* seções */
+  --font-md: 20px;  /* parágrafos maiores */
+  --font-sm: 16px;  /* texto padrão */
+  --font-xs: 14px;  /* detalhes */
+
+  /* Sistema de espaçamento */
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --radius-base: 10px;
+
+  
+}
+
