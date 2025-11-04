@@ -1,0 +1,281 @@
+@import url(variaveis.css);
+
+
+:root {
+  /* Variáveis de Espaçamento e Fonte */
+  --font-lg: 1.5rem;
+  --font-md: 1.25rem;
+  --font-xs: 0.875rem;
+  --font-xl: 2rem;
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+}
+
+
+body {
+  overflow-x: hidden;
+  color: var();
+}
+
+@media (max-width: 230px) {
+  h1 {
+    font-size: var(--font-lg);
+  }
+
+  h2 {
+    font-size: var(--font-md);
+  }
+
+  p {
+    font-size: var(--font-xs);
+  }
+
+  .menu-cont {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: var(--space-2) 4px;
+  }
+
+  .logo-inicial {
+    max-width: 65%;
+    min-width: 120px;
+  }
+
+  .logo-inicial img {
+    width: 100%;
+    height: auto;
+  }
+
+  .redes-sociais {
+    gap: 4px;
+    justify-content: flex-end;
+  }
+
+  .redes-sociais img {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  #nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: var(--space-2);
+  }
+
+  .menu .menu-cont #nav-links a {
+    font-size: var(--font-xs) !important;
+    font-weight: 500 !important;
+    margin: 0 4px;
+    white-space: nowrap;
+  }
+
+}
+
+/* 📱 2. Celulares grandes / Tablets pequenos (481px a 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  h1 {
+    font-size: var(--font-xl);
+  }
+
+  h2 {
+    font-size: var(--font-lg);
+  }
+
+  .menu-cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-2);
+  }
+
+  #nav-links {
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .redes-sociais {
+    flex-direction: row;
+    gap: var(--space-2);
+  }
+
+  .contato-caixas,
+  .time-equipe {
+    justify-content: center;
+  }
+
+  .contato-caixa,
+  .time-equipe .caixa {
+    flex: 0 1 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  #nav-links {
+    display: none;
+  }
+
+  #nav-links.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 35px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+    padding: 40px 0;
+    margin: 0;
+  }
+
+  #nav-links.active a:first-child {
+    margin-top: 100px;
+  }
+
+  #nav-links.active .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    order: 0;
+
+  }
+
+  #nav-links.active .redes-sociais {
+    order: 2;
+
+    margin-top: auto;
+    padding-bottom: 40px;
+  }
+
+  #nav-links a {
+    color: #040000;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+    padding-top: 10px;
+
+  }
+
+  #nav-links a:hover {
+    color: #0061e8;
+  }
+
+  #nav-links .redes-sociais {
+    display: block;
+    gap: 25px;
+    justify-content: center;
+    margin-top: auto;
+    padding-bottom: 40px;
+
+  }
+
+  #nav-links .redes-sociais img {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.3s ease;
+    justify-content: center;
+  }
+
+  #nav-links .redes-sociais img:hover {
+    transform: scale(1.2);
+  }
+
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  #nav-links.active .btn-dark {
+    display: block;
+    margin: 10px 0;
+    order: 1;
+  }
+
+  #nav-links.active .btn-dark button {
+    width: 50px;
+    height: 50px;
+
+
+
+  }
+}
+
+
+
+/* 💻 3. Tablets médios (769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .menu-cont {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #nav-links {
+    flex-grow: 1;
+    justify-content: center;
+  }
+
+  #nav-links a {
+    font-size: 1rem;
+  }
+
+  .contato-caixa {
+    flex: 0 1 45%;
+  }
+
+  .time-equipe .caixa {
+    flex: 0 1 30%;
+  }
+}
+
+/* 🖥️ 4. Laptops e desktops médios (1025px a 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .time-equipe .caixa {
+    flex: 0 1 calc(25% - 20px);
+  }
+
+  .contato-caixa {
+    flex: 0 1 30%;
+  }
+}
+
+/* 🖥️ 5. Monitores grandes (1441px pra cima) */
+@media (min-width: 1441px) {
+  body {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+
+
+#nav-links.active {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#nav-links.active .menu-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}

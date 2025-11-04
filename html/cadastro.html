@@ -1,0 +1,107 @@
+
+<link rel="stylesheet" href="css/styles1.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+  <link rel="stylesheet" href="css/cadastro.css">
+
+  <!-- FORMULÁRIO VOLUNTÁRIO -->
+<section id="cadastro-voluntario" class="sobre-forms">
+  <h1>Cadastro de Voluntário</h1>
+  <p>Junte-se à nossa equipe de voluntários e ajude a levar saúde e esperança a quem mais precisa.</p>
+
+  <form class="form-cadastro">
+    <div class="form-grupo">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="cpf">CPF:</label>
+      <input id="cpf" name="cpf" type="text" placeholder="000.000.000-00" maxlength="14" required />
+    </div>
+
+    <div class="form-grupo">
+      <label for="nascimento">Data de Nascimento:</label>
+      <input type="date" id="nascimento" name="nascimento" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="area">Área de Atuação:</label>
+      <select id="area" name="area" required>
+        <option value="">Selecione</option>
+        <option value="medicina">Medicina</option>
+        <option value="odontologia">Odontologia</option>
+        <option value="psicologia">Psicologia</option>
+        <option value="enfermagem">Enfermagem</option>
+        <option value="assistencia">Assistência Social</option>
+        <option value="outros">Outros</option>
+      </select>
+    </div>
+
+    <div class="form-grupo">
+      <label for="mensagem">Por que deseja ser voluntário?</label>
+      <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte um pouco sobre você e sua motivação..."
+        required></textarea>
+    </div>
+
+    <button type="submit" class="botao-enviar">Enviar Cadastro</button>
+  </form>
+</section>
+
+<!-- FORMULÁRIO DOADORES -->
+<section id="cadastro-doadores" class="sobre-forms">
+  <h1>Cadastro de Doadores</h1>
+  <p>Seja um doador e ajude a ONG a manter seus projetos funcionando e a levar saúde a mais pessoas.</p>
+
+  <form class="form-cadastro">
+    <div class="form-grupo">
+      <label for="nome-doador">Nome Completo:</label>
+      <input type="text" id="nome-doador" name="nome-doador" placeholder="Seu nome completo" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="email-doador">E-mail:</label>
+      <input type="email" id="email-doador" name="email-doador" placeholder="seuemail@exemplo.com" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="telefone-doador">Telefone:</label>
+      <input type="tel" id="telefone-doador" name="telefone-doador" placeholder="(00) 00000-0000" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="nascimento-doador">Data de Nascimento:</label>
+      <input type="date" id="nascimento-doador" name="nascimento-doador" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="valor-doacao">Valor da Doação (mensal ou única):</label>
+      <input type="number" id="valor-doacao" name="valor-doacao" placeholder="R$ 50,00" required>
+    </div>
+
+    <div class="form-grupo">
+      <label>Tipo de Doação:</label>
+      <select id="tipo-doacao" name="tipo-doacao" required>
+        <option value="">Selecione</option>
+        <option value="mensal">Mensal</option>
+        <option value="unica">Única</option>
+      </select>
+    </div>
+
+    <div class="form-grupo">
+      <label for="mensagem-doador">Mensagem (opcional):</label>
+      <textarea id="mensagem-doador" name="mensagem-doador" rows="4" placeholder="Quer deixar uma mensagem ou comentário?"></textarea>
+    </div>
+
+    <button type="submit" class="botao-enviar">Enviar Cadastro</button>
+  </form>
+</section>
